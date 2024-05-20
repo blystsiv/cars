@@ -15,6 +15,8 @@
   --main-color: #f5d000;
   --text-color: #ffffff;
   --background-color: #1a1a1a;
+  --accent-color: #b89c00;
+  --hover-color: #383838;
 }
 
 body {
@@ -48,59 +50,6 @@ header.shadow {
   align-items: center;
   justify-content: space-between;
   padding: 0 35px;
-}
-
-/* Hero Section */
-.home {
-  position: relative;
-  height: 100vh;
-  background: url('img/home.jpg') no-repeat center center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.home .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.home-text {
-  position: relative;
-  text-align: center;
-  color: #ffffff;
-}
-
-.home-text h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.home-text h1 span {
-  color: var(--main-color);
-}
-
-.home-text p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
-
-.home-text .btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: var(--main-color);
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: background-color 0.3s;
-}
-
-.home-text .btn:hover {
-  background-color: #e09b00;
 }
 
 #menu-icon {
@@ -176,8 +125,8 @@ header.shadow {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 640px;
-  background-image: url(/img/homepagecar.jpeg);
+  min-height: 940px;
+  background-image: url(img/homepagecar.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center right;
@@ -211,7 +160,7 @@ header.shadow {
 }
 
 .btn:hover {
-  background: #b89c00;
+  background: var(--accent-color);
 }
 
 .heading {
@@ -329,7 +278,7 @@ header.shadow {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  background: #383838;
+  background: var(--hover-color);
   border-radius: 0.67rem;
   margin-bottom: 15px;
 }
@@ -395,7 +344,7 @@ header.shadow {
 }
 
 .rental-container .box:hover {
-  background: #383838;
+  background: var(--hover-color);
 }
 
 .rental-container .box img {
@@ -433,7 +382,7 @@ header.shadow {
 }
 
 .footer {
-  background: #383838;
+  background: var(--hover-color);
   color: #ffffff;
   border-top: 2px solid var(--main-color);
   padding: 30px 0;
