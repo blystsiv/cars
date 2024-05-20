@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700&display=swap');
+
+* {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-padding-top: 1rem;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #f5d000;
+  --text-color: #ffffff;
+  --background-color: #1a1a1a;
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: var(--background-color);
+  padding: 20px 0;
+}
+
+header.shadow {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 35px;
+}
+
+/* Hero Section */
+.home {
+  position: relative;
+  height: 100vh;
+  background: url('img/home.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.home-text {
+  position: relative;
+  text-align: center;
+  color: #ffffff;
+}
+
+.home-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.home-text h1 span {
+  color: var(--main-color);
+}
+
+.home-text p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.home-text .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--main-color);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.home-text .btn:hover {
+  background-color: #e09b00;
+}
+
+#menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text-color);
+  display: none;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.logo span {
+  color: var(--main-color);
+}
+
+.navbar {
+  display: flex;
+  column-gap: 2rem;
+}
+
+.navbar a {
+  color: var(--text-color);
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.navbar a:hover,
+.navbar .active {
+  color: var(--main-color);
+  border-bottom: 2px solid var(--main-color);
+}
+
+#search-icon {
+  font-size: 26px;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.search-box {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  left: 0;
+  background: var(--background-color);
+  box-shadow: 4px 4px 20px rgba(15, 54, 55, 0.1);
+  border: 1px solid var(--main-color);
+  border-radius: 0.5rem;
+  clip-path: circle(0% at 100% 0%);
+  transition: clip-path 0.3s;
+  z-index: 99;
+}
+
+.search-box.active {
+  clip-path: circle(144% at 100% 0%);
+}
+
+.search-box input {
+  width: 100%;
+  padding: 20px;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 640px;
+  background-image: url(/img/homepagecar.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center right;
+  text-align: center;
+  padding: 50px 15px;
+}
+
+.home-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.home-text span {
+  color: var(--main-color);
+}
+
+.home-text p {
+  font-size: 1.125rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  padding: 12px 24px;
+  background: var(--main-color);
+  color: var(--background-color);
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #b89c00;
+}
+
+.heading {
+  text-align: center;
+  padding: 50px 15px;
+}
+
+.heading span {
+  font-weight: 500;
+  color: var(--main-color);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.heading h2 {
+  margin-bottom: 10px;
+}
+
+.heading p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.cars-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding: 0 15px;
+}
+
+.cars-container .box {
+  flex: 1 1 17rem;
+  position: relative;
+  height: 250px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.cars-container .box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.cars-container .box img:hover {
+  transform: scale(1.1);
+}
+
+.cars-container .box h2 {
+  position: absolute;
+  bottom: 0.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 400;
+  font-size: 1.25rem;
+  background: var(--background-color);
+  padding: 10px 15px;
+  border-radius: 0.5rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+.cars-container .box:hover h2 {
+  background: var(--main-color);
+  color: var(--background-color);
+}
+
+.about-us {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  padding: 50px 15px;
+}
+
+.about-us-img {
+  flex: 1 1 50%;
+}
+
+.about-us-text {
+  flex: 1 1 50%;
+  padding: 20px;
+}
+
+.about-us-text span {
+  font-weight: 500;
+  color: var(--main-color);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.about-us-text h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.about-us-text p {
+  font-size: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.1rem;
+  margin-top: 2rem;
+  padding: 0 15px;
+}
+
+.services-container .box {
+  flex: 1 1 30%;
+  position: relative;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background: #383838;
+  border-radius: 0.67rem;
+  margin-bottom: 15px;
+}
+
+.services-container .box img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.services-container .box h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.services-container .box span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.services-container .box .bx {
+  color: var(--main-color);
+  margin: 0.8rem 0;
+}
+
+.services-container .box .btn {
+  max-width: 120px;
+}
+
+.services-container .box .details {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 1.8rem;
+  right: 1rem;
+  font-size: 1rem;
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+.services-container .box .details:hover {
+  color: var(--main-color);
+  text-decoration: underline;
+}
+
+.rental-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 0 15px;
+}
+
+.rental-container .box {
+  flex: 1 1 30%;
+  padding: 20px;
+  transition: background 0.3s;
+  margin-bottom: 15px;
+}
+
+.rental-container .box:hover {
+  background: #383838;
+}
+
+.rental-container .box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.rental-container .box h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.rental-container .box p {
+  font-size: 0.8rem;
+  margin: 4px 0 10px;
+}
+
+.rental-container .box .rental-btn {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+  color: var(--text-color);
+  transition: color 0.4s, column-gap 0.4s;
+}
+
+.rental-container .box .rental-btn .bx {
+  font-size: 20px;
+}
+
+.rental-container .box .rental-btn:hover {
+  color: var(--main-color);
+  column-gap: 0.7rem;
+}
+
+.footer {
+  background: #383838;
+  color: #ffffff;
+  border-top: 2px solid var(--main-color);
+  padding: 30px 0;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-container .footer-box {
+  flex: 1 1 20%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.footer-container .logo {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.social a {
+  font-size: 24px;
+  color: var(--text-color);
+  margin-right: 1rem;
+  transition: color 0.3s;
+}
+
+.social a:hover {
+  color: var(--main-color);
+}
+
+.footer-box h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.footer-box a,
+.footer-box p {
+  color: #ffffff;
+  margin-bottom: 10px;
+  transition: color 0.3s;
+}
+
+.footer-box a:hover,
+.footer-box p:hover {
+  color: var(--main-color);
+}
