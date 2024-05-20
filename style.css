@@ -239,12 +239,19 @@ header.shadow {
 }
 
 .about-us-img {
-  flex: 1 1 50%;
+  flex: 1 1 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.about-us-img img {
+  width: 100%;
+  height: auto;
 }
 
 .about-us-text {
-  flex: 1 1 50%;
-  padding: 20px;
+  flex: 1 1 100%;
+  text-align: center;
 }
 
 .about-us-text span {
@@ -285,7 +292,7 @@ header.shadow {
 
 .services-container .box img {
   width: 100%;
-  height: 150px;
+  height: auto;
   object-fit: contain;
   margin-bottom: 1rem;
 }
@@ -349,7 +356,7 @@ header.shadow {
 
 .rental-container .box img {
   width: 100%;
-  height: 200px;
+  height: auto;
   object-fit: cover;
   margin-bottom: 15px;
 }
@@ -513,9 +520,14 @@ header.shadow {
     flex: 1 1 100%;
   }
 
-  .about-us {
+  .about-us-wrap {
+    display: flex;
     flex-direction: column;
-    text-align: center;
+  }
+
+  .about-us-img {
+    margin-top: 26px;
+    max-width: 100%;
   }
 
   .services-container .box,
@@ -525,5 +537,31 @@ header.shadow {
 
   .footer-container .footer-box {
     flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav {
+    padding: 0 15px;
+  }
+
+  .heading {
+    padding: 30px 15px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+  }
+
+  .services-container .box {
+    flex: 1 1 100%;
+  }
+
+  .rental-container .box {
+    flex: 1 1 100%;
+  }
+
+  .footer-container {
+    flex-direction: column;
   }
 }
